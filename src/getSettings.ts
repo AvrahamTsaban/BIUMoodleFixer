@@ -2,6 +2,8 @@ const DEFAULT_OPTIONS = {
 	courseListRevamp: true,
 	paddingMargin: false,
 	restoreOldIcons: false,
+	autoFillEditSubmission: false,
+	autoFillEditSubmissionText: '',
 }
 
 export async function getSettings() {

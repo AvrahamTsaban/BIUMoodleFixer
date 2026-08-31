@@ -49,6 +49,21 @@
 		"description": "The description in the settings page for the Restore Old Icons setting"
 	},
 
+	"settingTitleAutoFillEditSubmission": {
+		"message": "Auto-fill edit submission form",
+		"description": "The title in the settings page for the edit submission auto-fill setting"
+	},
+
+	"settingDescAutoFillEditSubmission": {
+		"message": "On pages ending with action=editsubmission, check required declaration boxes and fill the selected name field automatically",
+		"description": "The description in the settings page for the edit submission auto-fill setting"
+	},
+
+	"settingLabelAutoFillEditSubmissionText": {
+		"message": "Text to insert into the name field:",
+		"description": "Label for the configurable text inserted into the edit submission name field"
+	},
+
 	"reloadPageMsg": {
 		"message": "Reload the page to apply changes :)",
 		"description": "Reminds the user to reload the page after changin a setting"

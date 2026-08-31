@@ -10,7 +10,7 @@ async function init() {
 	if (settings.courseListRevamp) courseListRevamp()
 	if (settings.restoreOldIcons) restoreOldIcons()
 	if (settings.paddingMargin) paddingMargin()
-	autoFillEditSubmission()
+	autoFillEditSubmission(settings)
 }
 
 init()
