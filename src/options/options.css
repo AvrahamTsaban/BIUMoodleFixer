@@ -45,7 +45,7 @@ h1 {
 	margin-bottom: 1.25em;
 	padding: 1em;
 
-	input {
+	input[type='checkbox'] {
 		accent-color: var(--biu-active);
 		cursor: pointer;
 		height: 1.3em;
@@ -64,6 +64,22 @@ h1 {
 		font-size: medium;
 		margin-block: 1em 0;
 		margin-inline: 2.25em 0;
+	}
+
+	.text-input-label {
+		align-items: center;
+		display: flex;
+		gap: 0.75em;
+		margin: 1em 0 0 2.25em;
+	}
+
+	input[type='text'] {
+		border: 1px solid color-mix(in srgb, var(--biu-text-primary) 25%, transparent);
+		border-radius: 0.35em;
+		color: var(--biu-text-primary);
+		font-size: medium;
+		padding: 0.35em 0.5em;
+		width: 100%;
 	}
 }
 

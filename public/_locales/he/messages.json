@@ -49,6 +49,21 @@
 		"description": "The description in the settings page for the Restore Old Icons setting"
 	},
 
+	"settingTitleAutoFillEditSubmission": {
+		"message": "מילוי אוטומטי בעמוד עריכת הגשה",
+		"description": "The title in the settings page for the edit submission auto-fill setting"
+	},
+
+	"settingDescAutoFillEditSubmission": {
+		"message": "בדפים שמסתיימים ב־action=editsubmission יסמן אוטומטית את תיבות ההצהרה וימלא את שדה השם לפי הטקסט שהוגדר",
+		"description": "The description in the settings page for the edit submission auto-fill setting"
+	},
+
+	"settingLabelAutoFillEditSubmissionText": {
+		"message": "טקסט להוספה לשדה השם:",
+		"description": "Label for the configurable text inserted into the edit submission name field"
+	},
+
 	"reloadPageMsg": {
 		"message": "יש לטעון מחדש את הלשונית כדי להחיל את השינויים :)",
 		"description": "Reminds the user to reload the page after changin a setting"

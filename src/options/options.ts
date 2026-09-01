@@ -5,7 +5,7 @@ import { getSettings } from '../getSettings'
 function updateSetting(event: Event) {
 	const target = event.target as HTMLInputElement
 	const key = target.dataset.setting as string
-	const value = target.checked
+	const value = target.type === 'checkbox' ? target.checked : target.value
 	chrome.storage.sync.set({ [key]: value })
 
 	document.querySelector('#message')?.classList.remove('invisible')
@@ -23,10 +23,16 @@ function loadI18n() {
 // Load initial settings and set event listeners
 async function loadSettings() {
 	const settings = await getSettings()
-	for (const settingInput of ($m('.option input') as NodeListOf<HTMLInputElement>)) {
+	for (const settingInput of ($m('[data-setting]') as NodeListOf<HTMLInputElement>)) {
 		const key = settingInput.dataset.setting as string
-		settingInput.checked = settings[key] as boolean
-		settingInput.addEventListener('change', updateSetting)
+		if (settingInput.type === 'checkbox') {
+			settingInput.checked = Boolean(settings[key])
+			settingInput.addEventListener('change', updateSetting)
+		}
+		else {
+			settingInput.value = typeof settings[key] === 'string' ? settings[key] : ''
+			settingInput.addEventListener('input', updateSetting)
+		}
 	}
 }
 
